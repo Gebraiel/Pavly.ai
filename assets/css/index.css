@@ -1,0 +1,252 @@
+:root{
+    --primary-color:#161c25;
+    --secondary-color:rgb(87, 107, 139);
+    --box-background:#232b38;
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+ul{
+    list-style-type: none;
+}
+
+img{
+    max-width: 100%;
+}
+.container{
+    width: min(1250px,90%);
+    margin:auto;
+}
+.align-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: space-between;
+}
+.row{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background-color: var(--primary-color);
+}
+.box{
+    border-radius: 25px;
+    padding:30px;
+    color:white;
+    font-size:1.3rem;
+}
+
+.title{
+    color:white;
+    text-align: center;
+    border:1px solid #353535;
+
+    margin:20px 0;
+}
+.title h1{
+    font-size: 4.75rem;
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: 0px;
+    width:90%;
+    margin: auto;
+}
+.title .subtitle{
+    font-size:1.5rem;
+    font-weight: 200;
+    margin-top:20px;
+}
+@media(max-width:768px){
+    .title h1{
+        font-size:2.75rem;
+    }
+}
+/*Header Begin*/
+header{
+    padding:20px 0;
+    position: relative;
+}
+.menu{
+    margin:0 auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.menu a{
+    transition:0.3s;
+    font-weight: bold;
+}
+.menu a.active{
+    text-decoration: line-through;
+    color:var(--secondary-color)
+}
+.menu li:hover a{
+    color:var(--secondary-color);
+}
+.logo{
+    color:white;
+    font-size:1.2rem;
+}
+nav{
+    flex-grow:1;
+}
+.links{
+    gap:10px;
+    align-items: center;
+}
+.links li a{
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    background-color: white;
+    color:var(--primary-color);
+}
+.links li.email{
+    margin-left:20px;
+}
+.links li.email a{
+    width:auto;
+    padding:10px 20px;
+    border-radius:10px;
+}
+.menu li{
+    padding:10px 20px;
+}
+.burger-menu{
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: transparent;
+    width:25px;
+    height: 15px;
+}
+.burger-menu span{
+    content:"";
+    width:100%;
+    height: 2px;
+    /* align-self: center; */
+    background-color: white;
+    transition: 0.3s;
+    
+}
+.burger-menu span:first-child{
+    width: 100%;
+}
+
+.burger-menu.open span:nth-child(2){
+    display: none;
+}
+.burger-menu.open span:nth-child(1){
+    transform: translateY(7px) rotate(-45deg);
+}
+.burger-menu.open span:nth-child(3){
+    transform: translateY(-5px) rotate(45deg);
+}
+@media(max-width:768px){
+    .burger-menu{
+        display: flex; 
+    }
+    nav{
+        flex-direction: column;
+        background-color: var(--primary-color);
+        width: 100%;
+        position: absolute;
+        top:100%;
+        opacity: 0;
+        transition: 0.3s;
+    }
+
+    .burger-menu.open + nav{
+        opacity: 1;
+    }
+    nav .menu{
+        flex-direction: column;
+        margin-bottom:20px;
+    }
+    header .container{
+        justify-content: space-between;
+    }
+    .burder-menu{
+        display: block;
+    }
+
+}
+/*Header End*/
+
+/*Projects Begin*/
+.projects{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    gap:20px;
+}
+.project {
+    border-radius: 25px;
+    min-height: 250px;
+    background-image: url('../images/3.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.span-col-4{
+    grid-column: span 4;
+}
+.span-col-2{
+    grid-column: span 2;
+}
+.span-row-2{
+    grid-row: span 2;
+}
+@media(max-width:650px){
+    .projects{
+        grid-template-columns: 1fr;
+    }
+    .project{
+        grid-column: span 1;
+    }
+}
+/*Projects End*/
+
+/*About Begin*/
+#about .boxes .box{
+    background-color: var(--box-background);
+}
+.boxes{
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+.avatar{
+    width:50%; 
+    background-image:url('../images/avatar.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+.intro{
+    width:45%;
+}
+.intro p{
+    font-size:1.7rem;
+}
+.intro p b{
+    font-size:1.2em
+}
+.icon-container {
+    display: flex;
+    align-items: baseline;
+    gap:15px;
+}
+.icon-container i{
+    color:rgb(87, 107, 139);
+}
+/*About End*/

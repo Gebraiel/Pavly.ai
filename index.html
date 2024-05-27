@@ -1,102 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-        }
-        body{
-            background-color: #161c25;
-        }
-        img{
-            max-width: 100%;
-        }
-        .container{
-            width: min(1140px,90%);
-            margin: auto;
-        }
-        .projects{
-            display: grid;
-            grid-template-columns: repeat(6,1fr);
-            gap:20px;
-        }
-        .project {
-            border-radius: 25px;
-            min-height: 250px;
-            background-image: url('3.jpeg');
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-        .span-col-4{
-            grid-column: span 4;
-        }
-        .span-col-2{
-            grid-column: span 2;
-        }
-        .span-row-2{
-            grid-row: span 2;
-        }
-        @media(max-width:650px){
-            .projects{
-                grid-template-columns: 1fr;
-            }
-            .project{
-                grid-column: span 1;
-            }
-        }
-    </style>
+    <script src="https://kit.fontawesome.com/1a11e246e6.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
-<body>
-    <section>
-        <div class="container">
-            <div class="projects">
-                <a class="project span-col-4">
-                </a>
-                <a class="project span-col-2">
-                </a>
-                <a class="project span-col-2">
-                </a>
-                <a class="project span-col-4 span-row-2">
-                </a>
-                <a class="project span-col-2">
-                </a>
-                <a class="project span-col-4">
-                </a>
-                <a class="project span-col-2">
-                </a>
-                <a class="project span-col-2">
-                </a>
-                <a class="project span-col-2">
-                </a>
-                <a class="project span-col-2">
-                </a>
 
-            </div>
+<body>
+    <header>
+        <div class="container row">
+            <a class="logo" href="index.html">
+                Pavly.ai
+            </a>
+            <a class="burger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+            <nav class="row">
+                <ul class="menu row">
+                    <li><a href="" class="active">About</a></li>
+                    <li><a href="">Works</a></li>
+                    <li><a href="">Shop</a></li>
+                    <li><a href="">Freebies</a></li>
+                </ul>
+                <div class="buttons">
+                    <ul class="links row">
+                        <li>
+                            <a href=""><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="fa-brands fa-behance"></i></a>
+                        </li>
+                        <li class="email">
+                            <a href="">Email me</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-    </section>
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="box image">
-                    <img src="3.jpeg" alt="">
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="title box">
+                    <h1>Illustrator and Arabic lettering Artist</h1>
+                    <div class="subtitle">
+                        Who loves to turn words into lovely artworks and build memorable brands.
+
+                    </div>
                 </div>
-                <div class="box text-container">
-                    <p>I've been drawing letters for +8 years, also designing stunning Visual Identities for different brands.</p>
-                </div>
-                <div class="box text-container">
-                    <p>I love the mix between illustrations and Arabic typography.</p>
-                </div>
-                <div class="box text-container">
-                    <p>I love the mix between illustrations and Arabic typography.</p>
+                <div class="projects">
+                    <a class="project span-col-4">
+                    </a>
+                    <a class="project span-col-2">
+                    </a>
+                    <a class="project span-col-2">
+                    </a>
+                    <a class="project span-col-4 span-row-2">
+                    </a>
+                    <a class="project span-col-2">
+                    </a>
+                    <a class="project span-col-4">
+                    </a>
+                    <a class="project span-col-2">
+                    </a>
+                    <a class="project span-col-2">
+                    </a>
+                    <a class="project span-col-2">
+                    </a>
+                    <a class="project span-col-2">
+                    </a>
+
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section id="about">
+            <div class="container">
+                <div class="title box">
+                    <h1>Facts About Me
+                    </h1>
+
+                </div>
+                <div class="boxes row">
+                    <div class="row">
+                        <div class="avatar box" style=""></div>
+                        <div class="intro">
+                            <div class="box">
+                                <p>
+                                    <b>I've been drawing letters for +8 years</b>
+                                    also designing stunning Visual Identities for different brands
+                                </p>
+                            </div>
+                            <div class="box icon-container">
+
+                                <i class="fa-solid fa-location-dot"></i> Based in Egypt.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box icon-container" style="width:40%;">
+                            <i class="fa-solid fa-heart"></i> I love the mix between illustrations and Arabic typography.
+                        </div>
+                        <div class="box icon-container" style="width:51%">
+                            <i class="fa-solid fa-graduation-cap"></i> Earned a Bachelor's degree in Graphic Design from the
+                            Faculty of Applied Arts, Egypt.
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="box icon-container" style="width: 95%;">
+                            <i class="fa-solid fa-plant-wilt"></i> I was born and raised in Saudi Arabia, and moved to Egypt
+                            for university.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+    <script>
+        let burgerButton = document.querySelector('.burger-menu');
+        burgerButton.addEventListener('click', () => {
+            burgerButton.classList.toggle('open');
+        }) 
+    </script>
 </body>
+
 </html>
