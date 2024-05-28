@@ -33,7 +33,10 @@ img{
     display: flex;
     align-items: center;
 }
-
+.col{
+    display: flex;
+    flex-direction: column;
+}
 body{
     font-family:'Poppins',sans-serif;
     background-color: var(--primary-color);
@@ -68,6 +71,11 @@ body{
 @media(max-width:768px){
     .title h1{
         font-size:2.75rem;
+    }
+}
+@media(max-width:480px){
+    .title h1{
+        font-size:2rem;
     }
 }
 /*Header Begin*/
@@ -220,17 +228,29 @@ nav{
 /*About Begin*/
 #about .boxes .box{
     background-color: var(--box-background);
+    flex-grow: 1;
 }
+#about .row ,#about .col{
+    gap:20px;
+}
+#about .row{
+    width: 100%;
+}
+
 .boxes{
     align-items: stretch;
     flex-wrap: wrap;
 }
+
 .avatar{
     width:50%; 
+    height: 100%;
+
     background-image:url('../images/avatar.jpg');
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
+    
 }
 .intro{
     width:45%;
@@ -249,4 +269,25 @@ nav{
 .icon-container i{
     color:rgb(87, 107, 139);
 }
+@media(max-width:768px){
+    #about .row{
+        flex-direction: column;
+    }
+    #about .box{
+        width: 100% !important;
+    }
+    .avatar{
+        min-height: 500px;
+    }
+    .intro{
+        width:100%;
+    }
+}
 /*About End*/
+/*Footer Start*/
+    footer{
+        text-align: center;
+        color:white;
+        padding:30px 0;
+    }
+/*Footer End*/

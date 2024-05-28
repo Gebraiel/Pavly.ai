@@ -59,7 +59,8 @@
                     </div>
                 </div>
                 <div class="projects">
-                    <a class="project span-col-4">
+                    <a class="project span-col-4" background-image="assets/images/Folio/1.png">
+                        <!-- <img src="assets/images/Folio/1.png" alt=""> -->
                     </a>
                     <a class="project span-col-2">
                     </a>
@@ -92,8 +93,8 @@
                 </div>
                 <div class="boxes row">
                     <div class="row">
-                        <div class="avatar box" style=""></div>
-                        <div class="intro">
+                        <div class="avatar box"></div>
+                        <div class="intro col">
                             <div class="box">
                                 <p>
                                     <b>I've been drawing letters for +8 years</b>
@@ -116,7 +117,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="box icon-container" style="width: 95%;">
+                        <div class="box icon-container">
                             <i class="fa-solid fa-plant-wilt"></i> I was born and raised in Saudi Arabia, and moved to Egypt
                             for university.
                         </div>
@@ -126,13 +127,18 @@
         </section>
     </main>
     <footer>
-
+        <h3>© <span class="year"></span> Pavly.ai</h3>
     </footer>
     <script>
         let burgerButton = document.querySelector('.burger-menu');
         burgerButton.addEventListener('click', () => {
             burgerButton.classList.toggle('open');
         }) 
+    </script>
+    <script>
+        let year = document.querySelector('footer h3 .year');
+        console.log(year);
+        year.textContent=new Date().getFullYear();
     </script>
 </body>
 
